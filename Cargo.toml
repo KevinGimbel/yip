@@ -5,4 +5,5 @@ authors = ["Kevin Gimbel <hallo@kevingimbel.com>"]
 description = "TCP server that responds with callers IP address"
 edition = "2018"
 keywords = ["tcp", "server", "ip"]
+license = "AGPL-3.0-or-later"
 [dependencies]
