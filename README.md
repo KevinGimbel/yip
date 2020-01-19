@@ -39,8 +39,8 @@ Using `docker-compose`:
 version: '3'
 
 services:
-    mip:
-        image: kevingimbel/mip
+    yip:
+        image: kevingimbel/yip
         ports:
             - 8111:8111
 ``` 
