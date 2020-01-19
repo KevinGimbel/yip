@@ -30,7 +30,7 @@ Run the server with `cargo run`, then connect to it on port 8111.
 Start the Docker container and connect on port `8111` (or what ever port chosen).
 
 ```sh
-docker run --rm -p 8111:8111 kevingimbel/mip
+docker run --rm -p 8111:8111 kevingimbel/yip
 ```
 
 Using `docker-compose`:
