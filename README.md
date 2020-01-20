@@ -3,8 +3,8 @@
 <!-- BEGIN mktoc -->
 - [Why](#why)
 - [Usage](#usage)
-  - [Local](#local)
-  - [Docker](#docker)
+  - [Cargo](#cargo)
+  - [Binary](#binary)
 - [Contributing](#contributing)
   - [Where to start?](#where-to-start?)
 - [Code of Conduct](#code-of-conduct)
@@ -25,27 +25,19 @@ It responds with the callers' IP address on request. That's it.
 
 Run the server with `cargo run`, then connect to it on port 8111.
 
-### Docker
+### Binary
 
-Start the Docker container and connect on port `8111` (or what ever port chosen).
+Build the binary for your system with `cargo`.
 
 ```sh
-docker run --rm -p 8111:8111 kevingimbel/yip
-```
-
-Using `docker-compose`:
-
-```yaml
-version: '3'
-
-services:
-    yip:
-        image: kevingimbel/yip
-        ports:
-            - 8111:8111
+$ cargo build --release
 ``` 
 
-Then start with `docker-compose up -d`.
+Then copy the binary from `target/release/yip` to some place in your `$PATH`. Afterwards the server can be started by running `yip`.
+
+```sh
+$ yip
+```
 
 ## Contributing
 [⬆️ Back to Top](#table-of-contents)
