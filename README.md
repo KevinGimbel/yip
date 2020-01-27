@@ -5,6 +5,7 @@
 - [Usage](#usage)
   - [Cargo](#cargo)
   - [Binary](#binary)
+  - [Specify custom port](#specify-custom-port)
 - [Contributing](#contributing)
   - [Where to start?](#where-to-start?)
 - [Code of Conduct](#code-of-conduct)
@@ -37,6 +38,14 @@ Then copy the binary from `target/release/yip` to some place in your `$PATH`. Af
 
 ```sh
 $ yip
+```
+
+### Specify custom port
+
+By default port `8111` is used. A different port can be set with the environment variable `PORT`.
+
+```sh
+$ PORT=8080 yip
 ```
 
 ## Contributing
