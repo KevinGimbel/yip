@@ -17,6 +17,7 @@
 */
 use std::net::{TcpListener, TcpStream, Shutdown};
 use std::io::{Result, Write};
+use std::env;
 
 fn handle_client(mut stream: TcpStream) {
     let addr = stream.peer_addr().unwrap().to_string();
@@ -26,8 +27,10 @@ fn handle_client(mut stream: TcpStream) {
 }
 
 fn main() -> Result<()> {
+    // Read port from env
+    let port = env::var("PORT").unwrap_or_default().parse().unwrap_or(8111);
     // Create TCP listener
-    let listener = TcpListener::bind("0.0.0.0:8111")?;
+    let listener = TcpListener::bind(format!("0.0.0.0:{}", port))?;
 
     // accept connections and process them serially
     for stream in listener.incoming() {
